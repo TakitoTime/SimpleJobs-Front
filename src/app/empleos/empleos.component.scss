@@ -1,0 +1,16 @@
+.titulo{
+    width: 95%;
+    margin: auto;
+
+    h1{
+        padding: 15px;
+        text-align: center;
+    }
+}
+
+.contenedor{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
