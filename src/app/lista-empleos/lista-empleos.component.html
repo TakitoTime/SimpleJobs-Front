@@ -1,5 +1,8 @@
 <div class="contenedor">
-    <div class="empleos" *ngFor="let trabajo of trabajos">
-        <app-card-empleo [trabajo]="trabajo"></app-card-empleo>
+    <div class="empleos-container">
+        <div class="empleos" style="width: 100%;" *ngFor="let trabajo of trabajos">
+            <app-card-empleo (detail)="getElement($event)" [trabajo]="trabajo"></app-card-empleo>
+        </div>
     </div>
+    <app-empleos-detalles [jobDetail]="jobDetail" style="width: 70%;"></app-empleos-detalles>
 </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Trabajo } from '../models/trabajo';
 
 @Component({
@@ -8,6 +8,8 @@ import { Trabajo } from '../models/trabajo';
 })
 export class ListaEmpleosComponent implements OnInit {
 
+  jobDetail:Trabajo;
+  
   public trabajos:Array<Trabajo>;
 
   constructor() {
@@ -15,8 +17,12 @@ export class ListaEmpleosComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.jobDetail=Empleos[0];
   }
 
+  getElement(element:Trabajo){
+    this.jobDetail=element;
+  }
 }
 
 const Empleos: Trabajo []=[

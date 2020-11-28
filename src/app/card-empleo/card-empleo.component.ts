@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, Output } from '@angular/core';
-import { EventEmitter } from 'events';
+import { EventEmitter } from '@angular/core';
 import { Trabajo } from '../models/trabajo';
 
 @Component({
@@ -9,7 +9,8 @@ import { Trabajo } from '../models/trabajo';
 })
 export class CardEmpleoComponent implements OnInit {
 
-  //@Input() trabajo: Trabajo;
+  @Input() trabajo: Trabajo;
+  @Output() detail = new EventEmitter<Trabajo>();
 
   constructor() { 
   }
@@ -17,7 +18,8 @@ export class CardEmpleoComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  enviarTrabajoDetalles(element: Trabajo){
+  enviarTrabajoDetalles(element: any){
+    this.detail.emit(element);
   }
 
 }
