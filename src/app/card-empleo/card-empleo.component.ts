@@ -9,7 +9,7 @@ import { Trabajo } from '../models/trabajo';
 })
 export class CardEmpleoComponent implements OnInit {
 
-  @Input() trabajo: Trabajo;
+  //@Input() trabajo: Trabajo;
 
   constructor() { 
   }
